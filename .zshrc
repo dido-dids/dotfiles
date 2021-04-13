@@ -11,26 +11,25 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-# ZSH_THEME="agnoster"
-# ZSH_THEME="robbyrussell"
-
 CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
+# internal plugins
 plugins=(
     git
     docker
     colored-man-pages
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    yarn-completion
     kubectl
     encode64
 )
+
+# external plugins
+source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# theme
+source /home/linuxbrew/.linuxbrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,7 +56,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
-export VAULT_ADDR=https://vault.skypicker.com:8200
+# export VAULT_ADDR=https://vault.skypicker.com:8200
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
