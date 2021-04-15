@@ -1,5 +1,5 @@
 # Dirs
-alias ws="cd ~/workspace"
+alias ws="~/workspace"
 alias blkn="cd ~/workspace/balkan"
 alias fe="cd ~/workspace/balkan/balkan-frontend"
 alias gql="cd ~/workspace/balkan/graphql"

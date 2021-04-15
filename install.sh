@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Aliases
-source $CWD/aliases.sh
-
 # Check for Homebrew and install it if missing
 if test ! $(which brew)
 then
@@ -78,5 +75,6 @@ git pull origin master
 ln -sv $CWD/.zshrc ~/.zshrc
 ln -sv $CWD/.gitconfig ~/.gitconfig
 ln -sv $CWD/.p10k.zsh ~/.p10k.zsh
+ln -sv $CWD/.aliases.zsh ~/.aliases.zsh
 
 done
