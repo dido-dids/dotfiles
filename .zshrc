@@ -22,6 +22,7 @@ plugins=(
     colored-man-pages
     kubectl
     encode64
+    yarn
 )
 
 # external plugins
@@ -53,7 +54,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 
-# export VAULT_ADDR=https://vault.skypicker.com:8200
+export VAULT_ADDR=https://vault.skypicker.com
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+complete -o nospace -C /usr/bin/vault vault
+
+# open new tab in same directory
+precmd() {
+  printf "\e]9;9;%s\e\\" "$(wslpath -m "$PWD")"
+}

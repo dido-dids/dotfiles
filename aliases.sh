@@ -1,7 +1,7 @@
 # Dirs
 alias ws="~/workspace"
 alias blkn="cd ~/workspace/balkan"
-alias fe="cd ~/workspace/balkan/balkan-frontend"
+alias fe="cd ~/workspace/balkan/frontend"
 alias gql="cd ~/workspace/balkan/graphql"
 alias portalo="cd ~/workspace/portalo"
 
@@ -9,9 +9,10 @@ alias portalo="cd ~/workspace/portalo"
 alias k="kubectl"
 alias kns="kubens"
 alias kctx="kubectx"
-alias kebug='kubectl get pods -n system | grep debug | awk {'\''print $1'\''} | xargs -I {} -t -o kubectl exec -it {} -n system -- bash'
+alias kebug='kubectl get pods --field-selector=status.phase=Running -n system | grep debug | awk {'\''print $1'\''} | xargs -I {} -t -o kubectl exec -it {} -n system -- bash'
 
 # Others
 alias y="yarn"
 alias cat="bat"
 alias d="docker"
+alias dc="docker-compose"
