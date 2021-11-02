@@ -73,6 +73,7 @@ git remote add origin git@github.com:malyborky/dotfiles.git
 git pull origin master
 
 ln -sv $CWD/.zshrc ~/.zshrc
+ln -sv $CWD/.vimrc ~/.vimrc
 ln -sv $CWD/.gitconfig ~/.gitconfig
 ln -sv $CWD/.p10k.zsh ~/.p10k.zsh
 ln -sv $CWD/.aliases.zsh ~/.aliases.zsh
