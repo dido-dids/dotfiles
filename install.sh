@@ -30,7 +30,9 @@ apps=(
     htop
     k9s
     kubectx
+	kustomize
     redis
+	telnet
     terraform
     tldr
     vault
